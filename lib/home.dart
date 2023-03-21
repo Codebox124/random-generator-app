@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
               height: 12,
             ),
             TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 label: Text("Minimum"),
               ),

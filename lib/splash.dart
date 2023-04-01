@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   }
 
   _navigatetohome() async {
-    await Future.delayed(Duration(milliseconds: 1500), () {});
+    await Future.delayed(Duration(milliseconds: 1800), () {});
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => Login()),

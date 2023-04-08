@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gene/splash.dart';
+import 'package:gene/home.dart';
+
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -10,6 +13,7 @@ class Login extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.only(top: 20),
           child: Container(
+            height: double.infinity,
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -20,7 +24,7 @@ class Login extends StatelessWidget {
                     "assets/images/name.png",
                   ),
                   const Text(
-                    "Fast & Convinent Food Ordering",
+                    "Fast & Convenient Food Ordering",
                     style: TextStyle(fontSize: 15),
                   ),
                   Container(
@@ -30,7 +34,7 @@ class Login extends StatelessWidget {
                         Text(
                           "Log In To Your Account",
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -74,30 +78,51 @@ class Login extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Column(
-                    children: [
-                      Container(
-                       margin: EdgeInsets.only(top: 40),
-                        color: Color.fromARGB(255, 92, 187, 95),
-                        height: 50,
-                        width: 100,
-                        child: Container(
-                          
-                          child: Center(
-                            
-                            child: Text(
-
-                              "Login",
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    "Forgot Password",
+                    style: TextStyle(
+                      color: Colors.green,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  new GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
+                    },
+                    child: Container(
+                      height: 60,
+                      width: 140,
+                      child: Center(
+                        child: Text(
+                          'Login',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
                       ),
-                    ],
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 60, 170, 63),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 40,
+                  ),
+                  Text(
+                    "No account? SignUp",
+                    style: TextStyle(
+                      color: Colors.green,
+                    ),
                   ),
                 ],
               ),
